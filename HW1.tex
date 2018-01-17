@@ -1,5 +1,5 @@
-\documentclass[10pt]{article}
- \usepackage[margin=0.5in]{geometry} 
+\documentclass[8pt]{article}
+ \usepackage[margin=0.25in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
  
 \newcommand{\N}{\mathbb{N}}
@@ -20,13 +20,13 @@ Matt Fletcher
 
  
 \begin{problem}{1.1.28}
-$
+\[
 \begin{array}
 	 {rcr} x-y & = & 5 \\ 
 	     3y+z & = & 11 \\
        	4z  & = & 8 \\
 \end{array}
-$
+\]
 \end{problem}
  
 \begin{proof}
@@ -59,12 +59,12 @@ Substitute this into the first equation:
 
 
 \begin{problem}{1.1.38}
-	$
+	\[
 	\begin{array}
 	{lcr} 3x+2y & = & 2 \\ 
 	6x+4y & = & 14 \\
 	\end{array}
-	$
+	\]
 \end{problem}
 
 \begin{proof}
@@ -78,14 +78,14 @@ Substitute this into the first equation:
 \end{proof}
 
 \begin{problem}{1.1.48}
-$	
+\[	
 	\begin{array}
 	{lcr} 
 	x+y+z& = & 2 \\ 
 	-x+3y+2z & = & 8 \\
 	4x+y & = & 4 \\
 	\end{array}
-$
+\]
 \end{problem}
 
 \begin{proof}
@@ -127,13 +127,13 @@ Therefore, the final solution set is $\boxed{(x,y,z) = (0,4,-2)}$
 
 
 \begin{problem}{1.2.14}
-$\begin{bmatrix}
+\[\begin{bmatrix}
 
 1 & 2 & 1  &  0 \\
 0 & 0 & 1 & -1 \\
 0 & 0 & 0 & 0
 \end{bmatrix}
-$
+\]
 \end{problem}
 
 \begin{proof}
@@ -157,14 +157,14 @@ What this solution represents is a line in the $xy$-plane where every point on t
 \end{proof}
 
 \begin{problem}{1.2.31}
-	$	
-	\begin{array}
-	{lcr} 
-	x  -3z & = & -2 \\ 
-	3x+y-2z & = & 5 \\
-	2x+2y+z & = & 4 \\
-	\end{array}
-	$
+\[	
+\begin{array}
+{lcr} 
+x  -3z & = & -2 \\ 
+3x+y-2z & = & 5 \\
+2x+2y+z & = & 4 \\
+\end{array}
+\]
 \end{problem}
 
 \begin{proof}
@@ -189,52 +189,81 @@ $\begin{bmatrix}
 $
 \\
 \\
-Next, $R_3 = R_3 - R_2$
+Next, $R_3 = R_3 - R_2$:
 
 $\begin{bmatrix}
 
 1 & 0 & -3  &  -2 \\
 3 & 1 & -2 & 5 \\
-3 & 2 & -2 & 2
+0 & 1 & 0 & -3
 \end{bmatrix}
 $
+\\
+Next, $R_2 = R_2 - R_1$:
 
+$\begin{bmatrix}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-%%ORIGINAL WORK, WRONG APPROACH	
-\iffalse	
-Add $-2$ times the second equation and the third equation:
-\[-4x -3z = -6\]
+1 & 0 & -3  &  -2 \\
+2 & 1 & 1 & 7 \\
+0 & 1 & 0 & -3
+\end{bmatrix}
+$
+\\	
+Swap $R_2$ and $R_3$:
 
-Multiply through by $-1$. 
-\[4x + 3z = 6\]
+$\begin{bmatrix}
 
-The original first equation and this equation are both in terms of $x$ and $z$.
-	\[
-	\begin{array}
-	{lcr} 
-	x-3z & = & -2 \\ 
-	4x + 3z &=& 6 \\
-	\end{array}
-	\]
+1 & 0 & -3  &  -2 \\
+0 & 1 & 0 & -3 \\
+2 & 1 & 1 & 7
+\end{bmatrix}
+$	
+\\
+Next, $R_3 = R_3 -2R_1$:
+
+$\begin{bmatrix}
+
+1 & 0 & -3  &  -2 \\
+0 & 1 & 0 & -3 \\
+0 & 1 & 7 & 11
+\end{bmatrix}
+$		
+\\
+Next, $R_3 = R_3 -R_2$:
+
+$\begin{bmatrix}
+
+1 & 0 & -3  &  -2 \\
+0 & 1 & 0 & -3 \\
+0 & 0 & 7 & 14
+\end{bmatrix}
+$		
+
+Multiply the last row by $\frac{1}{7}$:
+
+$\begin{bmatrix}
+
+1 & 0 & -3  &  -2 \\
+0 & 1 & 0 & -3 \\
+0 & 0 & 1 & 2
+\end{bmatrix}
+$	
+\\
+\\
+Next, $R_1 = R_1 +  3R_3$:
+
+$\begin{bmatrix}
+
+1 & 0 & 0  &  4 \\
+0 & 1 & 0 & -3 \\
+0 & 0 & 1 & 2
+\end{bmatrix}
+$	
 	
-	Adding these two equations:
-	\[5x = 4\]
-\fi
+This means the solution to the original set of equations is $\boxed{(x_1,x_2,x_3) = (4,-3,2)}$
 \end{proof}
+
+
 
 \end{document}
 

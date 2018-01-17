@@ -19,7 +19,7 @@ Matt Fletcher
 \\MA244-03
 
  
-\begin{problem}{28}
+\begin{problem}{1.1.28}
 $
 \begin{array}
 	 {rcr} x-y & = & 5 \\ 
@@ -58,10 +58,10 @@ Substitute this into the first equation:
 
 
 
-\begin{problem}{38}
+\begin{problem}{1.1.38}
 	$
 	\begin{array}
-	{rcr} 3x+2y & = & 2 \\ 
+	{lcr} 3x+2y & = & 2 \\ 
 	6x+4y & = & 14 \\
 	\end{array}
 	$
@@ -77,25 +77,172 @@ Substitute this into the first equation:
 	However, the second equation says that $6x+4y = 14$. This set of equations is $\boxed{\text{inconsistent}}$.
 \end{proof}
 
-
-\begin{problem}{48TODO}
-	$
+\begin{problem}{1.1.48}
+$	
 	\begin{array}
-	{rcr} 3x+2y & = & 2 \\ 
-	6x+4y & = & 14 \\
+	{lcr} 
+	x+y+z& = & 2 \\ 
+	-x+3y+2z & = & 8 \\
+	4x+y & = & 4 \\
+	\end{array}
+$
+\end{problem}
+
+\begin{proof}
+Add 4 times the first equation and the negative of the third equation. 
+
+\[3y+4z = 4\]
+
+Next, add the first and second equations:
+\[4y+3z = 10\]
+
+This set of equations is easier to solve. 
+	\[
+	\begin{array}
+	{lcr} 3y+4z & = & 4 \\ 
+	4y+3z & = & 10 \\
+	\end{array}
+	\]
+
+Add 4 times the first equation and $-3$ times the second. 
+
+	\[
+	\begin{array}
+	{lcr} 12y+16z & = & 16 \\ 
+	-12y-9z & = & -30 \\
+	\end{array}
+	\]
+Adding these, $7z=-14$ and $\boxed{z = -2}$. Substitute this back into equation 2 (the unomodified one):
+
+\[3y+(-8) = 4\]
+\[\boxed{y = 4}\]
+
+Substitute both of these into the original first equation:
+\[x+2+-4 = 2\]
+\[\boxed{x = 0}\]
+
+Therefore, the final solution set is $\boxed{(x,y,z) = (0,4,-2)}$
+
+\end{proof}
+
+
+\begin{problem}{1.2.14}
+$\begin{bmatrix}
+
+1 & 2 & 1  &  0 \\
+0 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$
+\end{problem}
+
+\begin{proof}
+This matrix represents the following set of simultaneous equations:
+
+	$	
+	\begin{array}
+	{lcr} 
+	x+2y+z& = & 0 \\ 
+	z & = & -1 \\
+	0 & = & 0 \\
+	\end{array}
+	$
+	
+Substituting the value for $z$ in the second equation into the first equation, we get a linear equation in terms of $x$ and $y$. 
+
+\[\boxed{x+2y = 1}\]
+
+What this solution represents is a line in the $xy$-plane where every point on this line is an acceptable solution to the original matrix.  
+
+\end{proof}
+
+\begin{problem}{1.2.31}
+	$	
+	\begin{array}
+	{lcr} 
+	x  -3z & = & -2 \\ 
+	3x+y-2z & = & 5 \\
+	2x+2y+z & = & 4 \\
 	\end{array}
 	$
 \end{problem}
 
 \begin{proof}
-	By inspection, the first equation appears to be very similar to the second. 
-	
-	Multiply the first equation by 2:
-	
-	\[6x+4y = 4\]
-	
-	However, the second equation says that $6x+4y = 14$. This set of equations is $\boxed{\text{inconsistent}}$.
-\end{proof}
+Start by writing this as an augmented matrix:
+$\begin{bmatrix}
 
+1 & 0 & -3  &  -2 \\
+3 & 1 & -2 & 5 \\
+2 & 2 & 1 & 4
+\end{bmatrix}
+$
+
+First, $R_3 = R_3 + R_1$
+
+
+$\begin{bmatrix}
+
+1 & 0 & -3  &  -2 \\
+3 & 1 & -2 & 5 \\
+3 & 2 & -2 & 2
+\end{bmatrix}
+$
+\\
+\\
+Next, $R_3 = R_3 - R_2$
+
+$\begin{bmatrix}
+
+1 & 0 & -3  &  -2 \\
+3 & 1 & -2 & 5 \\
+3 & 2 & -2 & 2
+\end{bmatrix}
+$
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+%%ORIGINAL WORK, WRONG APPROACH	
+\iffalse	
+Add $-2$ times the second equation and the third equation:
+\[-4x -3z = -6\]
+
+Multiply through by $-1$. 
+\[4x + 3z = 6\]
+
+The original first equation and this equation are both in terms of $x$ and $z$.
+	\[
+	\begin{array}
+	{lcr} 
+	x-3z & = & -2 \\ 
+	4x + 3z &=& 6 \\
+	\end{array}
+	\]
+	
+	Adding these two equations:
+	\[5x = 4\]
+\fi
+\end{proof}
 
 \end{document}
+
+
+
+
+%StackOverflow links
+
+%Making augmented matrix
+% https://tex.stackexchange.com/questions/2233/whats-the-best-way-make-an-augmented-coefficient-matrix
+
+%Making simulataneous equations
